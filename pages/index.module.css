@@ -1,0 +1,73 @@
+.listCard {
+}
+
+.lists {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  border-right: 1px solid #ebebeb;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.list:nth-child(4n) {
+  border: none;
+}
+
+.list:hover {
+  transform: translateY(-10px);
+}
+
+.date {
+  font-size: 12px;
+  color: #5a5a5a;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+@media (max-width: 980px) {
+  .lists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .list:nth-child(4n) {
+    border-right: 1px solid #ebebeb;
+  }
+  .list:nth-child(3n) {
+    border: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .list:nth-child(3n) {
+    border-right: 1px solid #ebebeb;
+  }
+  .list:nth-child(2n) {
+    border: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .lists {
+    grid-template-columns: repeat(1, 1fr);
+    border: none;
+  }
+  .list:nth-child(n) {
+    border: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+  }
+}
